@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lux Hotel &amp; Suites</title>
+  <link rel="icon" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="header">
+    <div class="wrap header-inner">
+      <a href="#home" class="logo">
+        <img src="assets/images/logo-default-165x38.png" width="165" height="38" alt="Lux Hotel">
+      </a>
+
+      <div class="header-right">
+        <a class="book-link" href="#booking">
+          <i class="fa fa-pencil"></i> Book Now
+        </a>
+        <a class="phone-link" href="tel:+18001234567">
+          <i class="fa fa-mobile"></i> +1-800-1234-567
+        </a>
+        <a class="search-link" href="#rooms">
+          <i class="fa fa-search"></i>
+        </a>
+        <button class="menu-btn" id="menuBtn" onclick="openMenu()">
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero" id="home">
+    <div class="wrap">
+      <h1>Discover<br>Cozy Rooms</h1>
+      <p class="hero-sub">Perfect for Any Trip</p>
+
+      <form class="booking" id="booking" onsubmit="return checkForm()">
+        <!-- 点一下会变成日期选择框 -->
+        <input id="checkin" type="text" placeholder="Check in" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'">
+
+        <input id="checkout" type="text" placeholder="Check out" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'">
+
+        <select id="guests">
+          <option value="">Guests</option>
+          <option value="1">1 guest</option>
+          <option value="2">2 guests</option>
+          <option value="3">3 guests</option>
+          <option value="4">4 guests</option>
+        </select>
+
+        <button type="submit">Book Now</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="about" id="about">
+    <div class="wrap about-inner">
+      <div class="about-photo">
+        <img src="assets/images/job-portal-1-570x368.jpg" width="570" height="368" alt="Hotel staircase">
+      </div>
+
+      <div class="about-copy">
+        <h2>Relax at Our <em>Hotel</em></h2>
+        <p>Lux Hotel and Suites is a family-owned Boutique Hotel that desires to cater and provide guests with personalized hospitality based on what they prefer.</p>
+        <p>Whether the guest is looking for quiet time and lots of privacy or seeking energetic, friendly environment in the most delightful place away from home, we can provide it.</p>
+
+        <div class="signature">
+          <img src="assets/images/logo-painting-136x61.png" width="136" height="61" alt="Signature">
+          <div>
+            <strong>Oliver Morgan</strong>
+            <span>General Manager, Lux Hotel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section rooms" id="rooms">
+    <div class="wrap">
+      <h2 class="section-title"><em>Our</em> Rooms</h2>
+
+      <div class="rooms-grid">
+        <a class="room" href="#booking">
+          <img src="assets/images/job-portal-2-370x264.jpg" width="370" height="264" alt="Single Room">
+          <p><span class="price">From $25</span> · 1 guest</p>
+          <h3>Single Room</h3>
+        </a>
+
+        <a class="room" href="#booking">
+          <img src="assets/images/job-portal-3-370x264.jpg" width="370" height="264" alt="Double Room">
+          <p><span class="price">From $35</span> · 2 guests</p>
+          <h3>Double Room</h3>
+        </a>
+
+        <a class="room" href="#booking">
+          <img src="assets/images/job-portal-4-370x264.jpg" width="370" height="264" alt="Family Room">
+          <p><span class="price">From $45</span> · 3 guests</p>
+          <h3>Family Room</h3>
+        </a>
+      </div>
+
+      <div class="center">
+        <a class="btn" href="#booking">View All Rooms</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section gallery" id="gallery">
+    <div class="wrap">
+      <h2 class="section-title">Gallery</h2>
+
+      <div class="gallery-list">
+        <div class="gallery-col">
+          <a href="assets/images/gallery-masonry-condensed-1-390x576.jpg" target="_blank">
+            <img src="assets/images/gallery-masonry-condensed-1-390x576.jpg" width="390" height="576" alt="Indoor pool">
+          </a>
+          <a href="assets/images/gallery-masonry-condensed-4-390x288.jpg" target="_blank">
+            <img src="assets/images/gallery-masonry-condensed-4-390x288.jpg" width="390" height="288" alt="Bed with cushions">
+          </a>
+        </div>
+
+        <div class="gallery-col">
+          <a href="assets/images/gallery-masonry-condensed-2-390x288.jpg" target="_blank">
+            <img src="assets/images/gallery-masonry-condensed-2-390x288.jpg" width="390" height="288" alt="Hotel building">
+          </a>
+          <a href="assets/images/gallery-masonry-condensed-5-390x576.jpg" target="_blank">
+            <img src="assets/images/gallery-masonry-condensed-5-390x576.jpg" width="390" height="576" alt="Room with a mural">
+          </a>
+        </div>
+
+        <div class="gallery-col">
+          <a href="assets/images/gallery-masonry-condensed-3-390x576.jpg" target="_blank">
+            <img src="assets/images/gallery-masonry-condensed-3-390x576.jpg" width="390" height="576" alt="White chair">
+          </a>
+          <a href="assets/images/gallery-masonry-condensed-6-390x288.jpg" target="_blank">
+            <img src="assets/images/gallery-masonry-condensed-6-390x288.jpg" width="390" height="288" alt="Hotel lounge">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section services" id="services">
+    <div class="wrap">
+      <h2 class="section-title"><em>Right Services</em> for Great Customers</h2>
+
+      <div class="services-grid">
+        <div>
+          <span class="icon mi mi-swim"></span>
+          <h3>Swimming Pool</h3>
+          <p>One of the main attractions at the hotel is our extensive, luxurious 20-metre indoor swimming pool.</p>
+        </div>
+        <div>
+          <span class="icon mi mi-wifi"></span>
+          <h3>Free Wi-Fi</h3>
+          <p>We provide our guests with free high-speed Wi-Fi connection throughout the whole hotel area.</p>
+        </div>
+        <div>
+          <span class="icon mi mi-cook"></span>
+          <h3>Restaurants</h3>
+          <p>Restaurants at Lux Hotel offer a vast choice of great dishes that can satisfy even the most exquisite tastes.</p>
+        </div>
+        <div>
+          <span class="icon mi mi-bike"></span>
+          <h3>Bike Rentals</h3>
+          <p>Our hotel also offers bike rental services to our guests and visitors. We provide bikes at very affordable prices.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta">
+    <div class="wrap">
+      <h2>Relax and Enjoy<br><em>Your Holiday</em></h2>
+      <p>With a variety of activities and amenities available at our hotel, you will surely have a great stay at our city and enjoy your holiday.</p>
+      <a class="btn cta-btn" href="#news">Read More</a>
+    </div>
+  </div>
+
+  <div class="section news" id="news">
+    <div class="wrap">
+      <h2 class="section-title">Latest News</h2>
+
+      <div class="news-grid">
+        <div>
+          <img src="assets/images/latest-news-1-571x353.jpg" width="571" height="353" alt="Hotel lobby">
+          <h3>6 Tips to Book the Best Hotel for You</h3>
+          <p class="news-meta"><span>by Mike Barnes</span><span>Apr 25, 2018 at 3:13 pm</span><span>News</span></p>
+          <p class="news-text">Travelers today are spoiled for choice when it comes to booking a hotel. Booking the best hotel goes beyond just booking the cheapest, or the most centrally located. Here's how to...</p>
+        </div>
+
+        <div>
+          <img src="assets/images/latest-news-2-571x353.jpg" width="571" height="353" alt="Bathroom">
+          <h3>Hotel Safety Tips You Should Not Ignore</h3>
+          <p class="news-meta"><span>by Mike Barnes</span><span>Apr 25, 2018 at 3:13 pm</span><span>News</span></p>
+          <p class="news-text">These days, travel is no Sunday picnic and when you finally stumble into the lobby of your hotel, you may be tired, dirty, and in a hurry to get cleaned up, get some sleep, or get to the first...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer" id="contact">
+    <div class="wrap footer-top">
+      <div class="footer-links">
+        <h2>Quick Links</h2>
+        <div class="link-columns">
+          <ul>
+            <li><a href="#rooms">Our Rooms</a></li>
+            <li><a href="#rooms">Single Room</a></li>
+            <li><a href="#rooms">Double Room</a></li>
+            <li><a href="#rooms">Family Room</a></li>
+            <li><a href="#rooms">Luxury Room</a></li>
+          </ul>
+          <ul>
+            <li><a href="#news" onclick="closeMenu()">News</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#booking">Login Page</a></li>
+            <li><a href="#booking">Registration Page</a></li>
+            <li><a href="#contact">Careers</a></li>
+          </ul>
+          <ul>
+            <li><a href="#contact">Contacts</a></li>
+            <li><a href="#gallery" onclick="closeMenu()">Gallery</a></li>
+            <li><a href="#about">Testimonials</a></li>
+            <li><a href="#about">Our History</a></li>
+            <li><a href="#booking">Booking</a></li>
+          </ul>
+          <ul>
+            <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+            <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+            <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+            <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+            <li><a href="https://pinterest.com" target="_blank">Pinterest</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-contact">
+        <h2>Contact Information</h2>
+        <ul>
+          <li><i class="fa fa-map-marker"></i> <span>2130 Fulton Street San Diego, CA<br>94117-1080 USA</span></li>
+          <li><i class="fa fa-phone"></i> <span><a href="tel:+18001234678">1-800-1234-678</a><br><a href="tel:+18008765098">1-800-8765-098</a></span></li>
+          <li><i class="fa fa-envelope-o"></i> <a href="mailto:info@demolink.org">info@demolink.org</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wrap footer-bottom">
+      <p>© 2020 All Rights Reserved. Terms of Use and Privacy Policy</p>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="menu-close" id="menuClose" onclick="closeMenu()">&times;</button>
+    <a href="#home" onclick="closeMenu()">Home</a>
+    <a href="#about" onclick="closeMenu()">About</a>
+    <a href="#rooms" onclick="closeMenu()">Rooms</a>
+    <a href="#gallery" onclick="closeMenu()">Gallery</a>
+    <a href="#services" onclick="closeMenu()">Services</a>
+    <a href="#news" onclick="closeMenu()">News</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
+  </div>
+  <div class="menu-mask" id="menuMask" onclick="closeMenu()"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
