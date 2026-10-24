@@ -676,17 +676,46 @@ ul {
 }
 
 @media (max-width: 992px) {
+  /* 窄屏：汉堡按钮跑到最左边，logo 跟在后面，图标靠右 */
+  .header-inner {
+    height: 70px;
+    justify-content: flex-start;
+    gap: 24px;
+  }
+
+  /* 去掉右侧容器的盒子，让里面的按钮直接参与 header 的排列 */
+  .header-right {
+    display: contents;
+  }
+
+  .menu-btn {
+    order: -1;
+    font-size: 22px;
+  }
+
   .book-link,
   .phone-link {
+    display: flex;
+    margin-left: 0;
+    padding-left: 0;
+    border-left: 0;
+    font-size: 18px;
+    letter-spacing: 0;
+  }
+
+  /* 第一个图标用 auto 外边距把三个图标一起顶到右边 */
+  .book-link {
+    margin-left: auto;
+  }
+
+  .book-link .link-label,
+  .phone-link .link-label {
     display: none;
   }
 
-  .header-right {
-    gap: 28px;
-  }
-
-  .header-inner {
-    height: 70px;
+  .book-link i,
+  .phone-link i {
+    font-size: 18px;
   }
 
   .hero {
@@ -875,6 +904,10 @@ ul {
 }
 
 @media (max-width: 480px) {
+  .header-inner {
+    gap: 16px;
+  }
+
   .hero h1 {
     font-size: 34px;
     line-height: 42px;
